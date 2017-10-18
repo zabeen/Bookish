@@ -13,7 +13,7 @@ namespace Bookish.DataAccess
     {
         public TitleQuery(string connectionStr) : base(connectionStr) { }
 
-        public List<TitleInfo> GetAllTitlesFromCatalogue()
+        public List<TitleInfo> SelectAllTitlesFromCatalogue()
         {
             List<TitleInfo> titleList = new List<TitleInfo>();
 

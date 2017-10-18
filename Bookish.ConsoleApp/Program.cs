@@ -14,11 +14,11 @@ namespace Bookish.ConsoleApp
         static void Main(string[] args)
         {
             TitleQuery tQuery = new TitleQuery(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-            List<TitleInfo> titles = tQuery.GetAllTitlesFromCatalogue();
+            List<TitleInfo> titles = tQuery.SelectAllTitlesFromCatalogue();
 
             foreach(TitleInfo title in titles)
             {
-                Console.WriteLine("Title: {0}, ISBN: {1}", title.Title_name, title.ISBN);
+                Console.WriteLine("Title: {0}, ISBN: {1}, Entered by: {2}", title.Title_name, title.ISBN, title.Entered_by.First_name);
             }
 
             Console.ReadLine();
