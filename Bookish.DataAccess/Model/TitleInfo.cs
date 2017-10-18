@@ -9,12 +9,12 @@ namespace Bookish.DataAccess.Model
     public class TitleInfo
     {
         // Info on an individual title within the library catalogue, from dbo.catalogue
-        public int CatalogueId { get; set; }
-        public string Name { get; set; }
-        public string Version { get; set; }
+        public int Catalogue_id { get; set; }
+        public string Title_name { get; set; }
+        public string Title_version { get; set; }
         public string ISBN { get; set; }
-        public int LoanPeriodInDays { get; set; }
-        public DateTime AddedToLibraryOn { get; set; }
-        public UserInfo AddedToLibraryBy { get; set; }
+        public int Loan_period_in_days { get; set; }
+        public DateTime Entered_date { get; set; }
+        public UserInfo Entered_by { get; set; }
     }
 }
