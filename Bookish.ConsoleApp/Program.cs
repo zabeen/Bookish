@@ -12,15 +12,10 @@ namespace Bookish.ConsoleApp
     {
         static void Main(string[] args)
         {
-            TitleQuery tQuery = new TitleQuery(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-            List<TitleInfo> titles = tQuery.SelectAllTitlesFromCatalogue();
-
-            foreach(TitleInfo title in titles)
-            {
-                Console.WriteLine("Title: {0}, ISBN: {1}, Entered by: {2}", title.Title_name, title.ISBN, title.Entered_by.First_name);
-            }
-
+            DataSelect data = new DataSelect(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
+            data.PrintLoanHistoryForUser(3);
             Console.ReadLine();
         }
+
     }
 }

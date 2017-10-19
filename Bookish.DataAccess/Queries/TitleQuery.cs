@@ -14,16 +14,16 @@ namespace Bookish.DataAccess
 
         public List<TitleInfo> SelectAllTitlesFromCatalogue()
         {
-            List<TitleInfo> titleList = new List<TitleInfo>();
+            List<TitleInfo> resultsList = new List<TitleInfo>();
 
             using (IDbConnection db = CreateNewDbConnection())
             {
                 string sql = "EXEC SelectAllTitlesFromCatalogue";
-                var allTitles = db.Query<TitleInfo, UserInfo, TitleInfo>(sql, (title, user) => { title.Entered_by = user; return title; }, splitOn: "library_user_id");
-                titleList = allTitles.ToList();
+                var data = db.Query<TitleInfo, UserInfo, TitleInfo>(sql, (title, user) => { title.Entered_by = user; return title; }, splitOn: "library_user_id");
+                resultsList = data.ToList();
             }
 
-            return titleList;
+            return resultsList;
         }
     }
 }

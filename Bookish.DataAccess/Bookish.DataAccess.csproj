@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\LoanHistoryToTitleInfo.cs" />
     <Compile Include="Queries\DbQuery.cs" />
     <Compile Include="Model\AuthorInfo.cs" />
     <Compile Include="Model\CopyInfo.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Model\TitleToAuthorInfo.cs" />
     <Compile Include="Model\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\UserLoanHistoryQuery.cs" />
     <Compile Include="Queries\TitleQuery.cs" />
   </ItemGroup>
   <ItemGroup>
