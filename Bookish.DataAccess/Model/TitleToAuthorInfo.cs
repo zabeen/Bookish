@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bookish.DataAccess.Model
+namespace Bookish.DataAccess
 {
-    public class TitleToAuthor
+    public class TitleToAuthorInfo
     {
         public TitleInfo Title { get; set; }
         public AuthorInfo Author { get; set; }

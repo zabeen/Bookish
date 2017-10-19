@@ -43,16 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbQuery.cs" />
+    <Compile Include="Queries\DbQuery.cs" />
     <Compile Include="Model\AuthorInfo.cs" />
     <Compile Include="Model\CopyInfo.cs" />
     <Compile Include="Model\LibraryInfo.cs" />
     <Compile Include="Model\LoanHistoryInfo.cs" />
     <Compile Include="Model\TitleInfo.cs" />
-    <Compile Include="Model\TitleToAuthor.cs" />
+    <Compile Include="Model\TitleToAuthorInfo.cs" />
     <Compile Include="Model\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TitleQuery.cs" />
+    <Compile Include="Queries\TitleQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
