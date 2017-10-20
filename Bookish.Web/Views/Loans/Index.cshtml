@@ -1,0 +1,36 @@
+﻿@using Bookish.Web.ViewModels;
+
+@{
+    ViewBag.Title = "Your Loans";
+}
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<h3>@ViewBag.ErrorMessage</h3>
+
+
+@if (@Model.Count == 0)
+{
+    <p>No records found. Time to check out a book! :)</p>
+}
+
+<table style="border: 1px solid grey;">
+    <tr>
+        <th>Title</th>
+        <th>Checked Out On</th>
+        <th>Due Back On</th>
+        <th>Current Loan Status</th>
+    </tr>
+    @foreach (LoansViewModel record in @Model)
+    {
+        <tr>
+            <td>@String.Format("{0} {1}", record.TitleName, (record.TitleVersion != null) ? " - " + record.TitleVersion : "")</td>
+            <td>@record.CheckedOutDate.ToShortDateString()</td>
+            <td>@record.DueBackDate.ToShortDateString()</td>
+            <td>@String.Format("{0} - {1}", record.CurrentStatus.Type, record.CurrentStatus.Date.ToShortDateString())</td>
+        </tr>
+    }
+</table>
+
+
+

@@ -1,18 +1,14 @@
-﻿using System;
+﻿using Bookish.DataAccess;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Bookish.DataAccess;
-using System.Configuration;
 
 namespace Bookish.ConsoleApp
 {
-    public class DataSelect
+    public class PrintData
     {
         public string ConnectionStr { get; private set; }
 
-        public DataSelect(string connectionStr)
+        public PrintData(string connectionStr)
         {
             ConnectionStr = connectionStr;
         }
@@ -34,7 +30,7 @@ namespace Bookish.ConsoleApp
 
             foreach (LoanHistoryToTitleInfo result in results)
             {
-                Console.WriteLine($"Title: {result.Title.Title_name}, Current Status: {result.LoanHistory.Current_status}, Status Changed Date: {result.LoanHistory.Status_changed_date}");
+                Console.WriteLine($"Title: {result.Title.Title_name}, Checked Out On: {result.LoanHistory.Onloan_date}, Due Back On: {result.LoanHistory.Dueback_date}");
             }
         }
 

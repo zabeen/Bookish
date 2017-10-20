@@ -12,7 +12,11 @@ namespace Bookish.DataAccess
         public int User_loan_history_id { get; set; }
         public UserInfo User { get; set; }
         public CopyInfo Copy { get; set; }
-        public string Current_status { get; set; }
-        public DateTime Status_changed_date { get; set; }
+        public DateTime Onloan_date { get; set; }
+        public DateTime Dueback_date { get; set; }
+        public DateTime Missing_date { get; set; }
+        public DateTime Reserved_date { get; set; }
+        public DateTime Recalled_date { get; set; }
+        public DateTime Returned_date { get; set; }
     }
 }

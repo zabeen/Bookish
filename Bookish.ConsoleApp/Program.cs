@@ -12,7 +12,7 @@ namespace Bookish.ConsoleApp
     {
         static void Main(string[] args)
         {
-            DataSelect data = new DataSelect(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
+            PrintData data = new PrintData(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
             data.PrintLoanHistoryForUser(3);
             Console.ReadLine();
         }
