@@ -24,7 +24,7 @@ namespace Bookish.Web.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("BookishDbConnection", throwIfV1Schema: false)
         {
         }
 
